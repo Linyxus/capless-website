@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@import "@fontsource/commit-mono/400.css";
+@import "@fontsource/commit-mono/200.css";
+@import "@fontsource/commit-mono/700.css";
+
+@theme {
+  --font-mono: "Commit Mono", ui-monospace, monospace;
+}
 
 /* Minimal, elegant global styles */
 :root {

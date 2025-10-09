@@ -6,12 +6,12 @@ const Hero: React.FC = () => {
       <div className="px-8 py-12">
         <div className="space-y-20">
           {/* Title with ultimate minimalism */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-thin text-center text-gray-900 tracking-tight leading-none">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-mono font-thin text-center text-gray-900 tracking-tight leading-none">
             Capture Checking
           </h1>
 
           {/* Understated subtitle with generous spacing */}
-          <p className="text-center text-xl md:text-2xl font-light text-gray-500 tracking-normal !mt-4">
+          <p className="text-center text-xl md:text-2xl font-mono font-light text-gray-500 tracking-normal !mt-4">
             Bringing Effect Checking to the Masses
           </p>
 
@@ -21,17 +21,19 @@ const Hero: React.FC = () => {
               href="https://docs.scala-lang.org/scala3/reference/experimental/cc.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative text-xl md:text-2xl font-normal text-black tracking-wide transition-all duration-200 hover:opacity-60"
+              className="group relative inline-flex items-baseline text-xl md:text-2xl font-mono font-normal text-black tracking-wide transition-all duration-200 hover:opacity-60"
             >
-              Documentation in Scala 3
+              <span className="opacity-40 text-3xl md:text-4xl font-thin leading-none" style={{ marginRight: '1rem' }}>↗</span>
+              <span>Documentation</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-black"></span>
             </a>
 
             <a
               href="#"
-              className="group relative text-xl md:text-2xl font-normal text-blue-600 tracking-wide transition-all duration-200 hover:opacity-60"
+              className="group relative inline-flex items-baseline text-xl md:text-2xl font-mono font-normal text-blue-600 tracking-wide transition-all duration-200 hover:opacity-60"
             >
-              Try Capture Checking
+              <span className="opacity-40 text-3xl md:text-4xl font-thin leading-none" style={{ marginRight: '1rem' }}>↗</span>
+              <span>Try Capture Checking</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-blue-600"></span>
             </a>
           </div>
