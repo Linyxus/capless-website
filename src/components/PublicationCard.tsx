@@ -24,19 +24,14 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
         </h3>
 
         {/* Authors */}
-        <p className="text-lg md:text-xl font-mono font-light text-gray-500 tracking-wide">
-          {authors.join(" · ")}
+        <p className="text-lg md:text-xl font-mono font-light text-gray-500 tracking-normal">
+          {authors.join(", ")}
         </p>
 
         {/* Venue and year */}
-        <p className="text-base md:text-lg font-mono font-light text-gray-400 tracking-wider">
+        <p className="text-base md:text-lg font-mono font-light text-gray-400 tracking-normal">
           <span className="uppercase">{venue}</span>
-          {year && (
-            <>
-              <span className="mx-6 text-gray-300">·</span>
-              <span>{year}</span>
-            </>
-          )}
+          {year && <span> {year}</span>}
         </p>
       </div>
     </div>
