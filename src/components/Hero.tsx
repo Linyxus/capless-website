@@ -12,7 +12,10 @@ const Hero: React.FC = () => {
 
           {/* Understated subtitle with generous spacing */}
           <p className="text-center text-xl md:text-2xl font-mono font-light text-gray-500 tracking-normal !mt-4">
-            Bringing Effect Checking to the Masses
+            Bringing Effect Checking to the{' '}
+            <span className="inline-block px-1 -mx-1 rounded transition-all duration-300 ease-out hover:bg-blue-100 hover:text-blue-700 hover:-translate-y-0.5 cursor-default">
+              Masses
+            </span>
           </p>
 
           {/* Prominent call-to-action links */}
