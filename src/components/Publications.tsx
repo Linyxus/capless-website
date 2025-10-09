@@ -11,32 +11,22 @@ interface Publication {
 
 const publications: Publication[] = [
   {
-    title: "Capturing Control Flow in Effect Systems",
-    authors: ["Alice Chen", "Bob Smith", "Carol Johnson"],
-    venue: "POPL",
-    year: 2024,
-    url: "#"
-  },
-  {
-    title: "Type-Safe Memory Management Through Capture Checking",
-    authors: ["David Lee", "Emma Wilson"],
-    venue: "PLDI",
-    year: 2023,
-    url: "#"
-  },
-  {
-    title: "Gradual Capture Checking for Legacy Codebases",
-    authors: ["Frank Martinez", "Grace Taylor", "Henry Brown"],
+    title: "What's in the Box: Ergonomic and Expressive Capture Tracking over Generic Data Structures",
+    authors: ["Yichen Xu", "Oliver Bračevac", "Cao Nguyen Pham", "Martin Odersky"],
     venue: "OOPSLA",
-    year: 2023,
-    url: "#"
+    year: 2025
   },
   {
-    title: "Foundations of Capability-Safe Programming",
-    authors: ["Iris Zhang", "Jack Robinson"],
-    venue: "ICFP",
-    year: 2022,
-    url: "#"
+    title: "Degrees of Separation: A Flexible Type System for Safe Concurrency",
+    authors: ["Yichen Xu", "Aleksander Boruch-Gruszecki", "Martin Odersky"],
+    venue: "OOPSLA",
+    year: 2024
+  },
+  {
+    title: "Capturing Types",
+    authors: ["Aleksander Boruch-Gruszecki", "Martin Odersky", "Edward Lee", "Ondřej Lhoták", "Jonathan Brachthäuser"],
+    venue: "TOPLAS",
+    year: 2024
   }
 ];
 

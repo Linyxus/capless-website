@@ -21,20 +21,20 @@ const Hero: React.FC = () => {
               href="https://docs.scala-lang.org/scala3/reference/experimental/cc.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-baseline text-xl md:text-2xl font-mono font-normal text-black tracking-wide transition-all duration-200 hover:opacity-60"
+              className="group relative inline-flex items-baseline text-xl md:text-2xl font-mono font-normal text-black tracking-wide"
             >
               <span className="opacity-40 text-3xl md:text-4xl font-thin leading-none" style={{ marginRight: '1rem' }}>↗</span>
               <span>Documentation</span>
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-black"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-px bg-black transition-all duration-300 ease-out group-hover:h-[3px]"></span>
             </a>
 
             <a
               href="#"
-              className="group relative inline-flex items-baseline text-xl md:text-2xl font-mono font-normal text-blue-600 tracking-wide transition-all duration-200 hover:opacity-60"
+              className="group relative inline-flex items-baseline text-xl md:text-2xl font-mono font-normal text-blue-600 tracking-wide"
             >
               <span className="opacity-40 text-3xl md:text-4xl font-thin leading-none" style={{ marginRight: '1rem' }}>↗</span>
               <span>Try Capture Checking</span>
-              <span className="absolute -bottom-2 left-0 w-full h-px bg-blue-600"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-px bg-blue-600 transition-all duration-300 ease-out group-hover:h-[3px]"></span>
             </a>
           </div>
         </div>
