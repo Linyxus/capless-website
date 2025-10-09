@@ -39,20 +39,20 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
   return (
     <div className="min-h-screen bg-white py-16 md:py-24 lg:py-32">
-      {/* Back button - minimal, top left */}
-      <div className="px-8 md:px-12 lg:px-16 mb-12 md:mb-16">
-        <button
-          onClick={() => navigate('/')}
-          className="group inline-flex items-center text-base md:text-lg font-mono font-light text-gray-500 hover:text-gray-900 transition-colors duration-300"
-        >
-          <span className="text-2xl font-thin mr-2 group-hover:-translate-x-1 transition-transform duration-300">←</span>
-          <span>Back</span>
-        </button>
-      </div>
-
       {/* Main content - centered container */}
-      <div className="px-8 md:px-12 lg:px-16">
-        <div className="max-w-3xl mx-auto space-y-16 md:space-y-20 lg:space-y-24">
+      <div className="flex justify-center px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-3xl space-y-12 md:space-y-16">
+
+          {/* Back button - minimal, top left of centered content */}
+          <div>
+            <button
+              onClick={() => navigate('/')}
+              className="group inline-flex items-center text-base md:text-lg font-mono font-light text-gray-500 hover:text-gray-900 transition-colors duration-300"
+            >
+              <span className="text-2xl font-thin mr-2 group-hover:-translate-x-1 transition-transform duration-300">←</span>
+              <span>Back</span>
+            </button>
+          </div>
 
           {/* Title section */}
           <div className="space-y-6 md:space-y-8">
@@ -174,11 +174,12 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
               </pre>
             </div>
           )}
+
+          {/* Bottom spacing */}
+          <div className="h-16 md:h-24"></div>
+
         </div>
       </div>
-
-      {/* Bottom spacing */}
-      <div className="h-16 md:h-24"></div>
     </div>
   );
 };
