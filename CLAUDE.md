@@ -48,10 +48,6 @@ pnpm lint
 - `tsconfig.app.json` - Application code configuration (strict mode, no emit)
 - `tsconfig.node.json` - Node/Vite configuration files
 
-**Build Process**:
-1. TypeScript compilation check (`tsc -b`)
-2. Vite bundling with React and TailwindCSS transformations
-
 ## Key Implementation Notes
 
 ### Component Development
@@ -75,6 +71,5 @@ When implementing new features:
 1. Create components in `/src/components/` directory
 2. Use TypeScript interfaces/types for props and state
 3. Apply TailwindCSS classes for styling
-4. Ensure ESLint passes before committing
-5. Test in development with `pnpm dev`
-6. Build and preview production build with `pnpm build && pnpm preview`
+4. Test building with `pnpm build`
+5. Linting with `pnpm lint`
