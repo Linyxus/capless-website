@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface PublicationCardProps {
+  id: string;
   title: string;
   authors: string[];
   venue: string;
   year?: number;
-  url?: string;
 }
 
 const PublicationCard: React.FC<PublicationCardProps> = ({
+  id,
   title,
   authors,
   venue,
-  year,
-  url
+  year
 }) => {
   const cardContent = (
     <div className="w-full border border-transparent bg-white pl-0 pr-10 py-12 md:pl-0 md:pr-14 md:py-16 lg:pl-0 lg:pr-20 lg:py-20 transition-all duration-300 ease-out group-hover:-translate-y-2 group-hover:border-blue-100 group-hover:[border-right-width:2px] group-hover:[border-bottom-width:2px] group-hover:border-r-blue-200 group-hover:border-b-blue-200 group-hover:cursor-pointer">
@@ -40,16 +41,9 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
   return (
     <article className="group relative w-full">
       {/* Frameless by default, materializes on hover with lift effect */}
-      {url ? (
-        <a
-          href={url}
-          className="block"
-        >
-          {cardContent}
-        </a>
-      ) : (
-        cardContent
-      )}
+      <Link to={`/paper/${id}`} className="block">
+        {cardContent}
+      </Link>
     </article>
   );
 };
