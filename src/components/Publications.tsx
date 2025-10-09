@@ -43,22 +43,25 @@ const Publications: React.FC = () => {
   return (
     <section className="py-48 md:py-64 lg:py-80 bg-white">
       {/* Section title - centered relative to full viewport */}
-      <div className="px-8 mb-48 md:mb-64 lg:mb-80">
+      <div className="px-8">
         <h2 className="text-5xl md:text-6xl font-mono font-thin text-gray-900 text-center tracking-tight">
           Publications
         </h2>
       </div>
 
+      {/* Refined spacer for minimalist aesthetic */}
+      <div className="h-8 md:h-10 lg:h-12"></div>
+
       {/* Publications list - truly centered layout */}
       <div className="flex flex-col items-center px-8 md:px-12 lg:px-16">
-        <div className="w-full max-w-4xl space-y-32 md:space-y-40 lg:space-y-48">
+        <div className="w-full max-w-4xl space-y-[12rem] md:space-y-[14rem] lg:space-y-[16rem]">
           {publications.map((pub, index) => (
             <article
               key={index}
               className="group flex flex-col items-center text-center"
             >
-              {/* Extremely minimal card - no border, just subtle background */}
-              <div className="w-full bg-gray-50/30 px-24 md:px-40 lg:px-56 py-32 md:py-48 lg:py-64 transition-all duration-700 hover:bg-gray-50/50">
+              {/* Ultra-thin bordered card with lift effect on hover */}
+              <div className="w-full border border-gray-200/50 px-24 md:px-40 lg:px-56 py-32 md:py-48 lg:py-64 transition-all duration-300 hover:border-r-[3px] hover:border-b-[3px] hover:border-r-gray-300 hover:border-b-gray-300">
                 {/* Publication title */}
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-mono font-thin text-gray-900 mb-20 md:mb-28 lg:mb-32 leading-loose tracking-tight">
                   {pub.url ? (
