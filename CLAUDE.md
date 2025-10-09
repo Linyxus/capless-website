@@ -48,17 +48,47 @@ pnpm lint
 - `tsconfig.app.json` - Application code configuration (strict mode, no emit)
 - `tsconfig.node.json` - Node/Vite configuration files
 
+## Design Philosophy & Style Guidelines
+
+**IMPORTANT**: This project follows a strict minimalist aesthetic. Maintain these principles:
+
+### Core Design Principles
+- **Absolute Minimalism**: No decorative elements (no lines, dots, borders, or ornaments)
+- **Typography-First**: Design speaks through letterforms and space alone
+- **留白 (Negative Space)**: Generous whitespace is essential - let elements breathe
+- **Monochrome + Accent**: Pure black/white/gray with minimal blue (#3B82F6) only when necessary
+
+### Typography Guidelines
+- **Hero/Titles**: Font-thin (100 weight), large scale (6xl-8xl), tight tracking
+- **Subtitles**: Font-light (300 weight), gray-500 color, normal tracking
+- **Body Text**: Font-light, restrained sizing, ample line height
+- **No Bold**: Avoid bold weights - create emphasis through scale and spacing
+
+### Color Palette
+- **Primary**: Black (#111111) text on white (#FFFFFF) background
+- **Secondary**: Gray shades (gray-500, gray-600) for supporting text
+- **Accent**: Blue (#3B82F6) - use extremely sparingly, if at all
+- **Selection**: 10% blue opacity for text selection
+
+### Spacing & Layout
+- **Generous Padding**: Large spacing between sections (space-y-20 minimum)
+- **Center Alignment**: Primary content centered with ample margins
+- **Viewport Heights**: Use min-h-screen for primary sections
+- **Asymmetry**: Intentional imbalances can create visual interest
+
 ## Key Implementation Notes
 
 ### Component Development
 - Components should be placed in `/src/components/`
 - Use TypeScript for all components with proper type definitions
 - TailwindCSS classes can be used directly without configuration
+- Maintain minimalist aesthetic
 
 ### Styling Approach
 - TailwindCSS v4 is configured via the Vite plugin
 - Global styles are in `/src/index.css` with CSS variables for theming
 - Component-specific styles can use CSS modules or inline Tailwind classes
+- Always prioritize whitespace and typography over decoration
 
 ### Type Safety
 - Strict TypeScript mode is enabled
