@@ -4,7 +4,7 @@ interface PublicationCardProps {
   title: string;
   authors: string[];
   venue: string;
-  year: number;
+  year?: number;
   url?: string;
 }
 
@@ -31,8 +31,12 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
         {/* Venue and year */}
         <p className="text-base md:text-lg font-mono font-light text-gray-400 tracking-wider">
           <span className="uppercase">{venue}</span>
-          <span className="mx-6 text-gray-300">·</span>
-          <span>{year}</span>
+          {year && (
+            <>
+              <span className="mx-6 text-gray-300">·</span>
+              <span>{year}</span>
+            </>
+          )}
         </p>
       </div>
     </div>

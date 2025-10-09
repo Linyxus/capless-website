@@ -5,7 +5,7 @@ interface Publication {
   title: string;
   authors: string[];
   venue: string;
-  year: number;
+  year?: number;
   url?: string;
 }
 
@@ -25,8 +25,7 @@ const publications: Publication[] = [
   {
     title: "Capturing Types",
     authors: ["Aleksander Boruch-Gruszecki", "Martin Odersky", "Edward Lee", "Ondřej Lhoták", "Jonathan Brachthäuser"],
-    venue: "TOPLAS",
-    year: 2024
+    venue: "TOPLAS"
   }
 ];
 
