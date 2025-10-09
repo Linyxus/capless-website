@@ -2,8 +2,8 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="px-8 py-16">
+    <div className="h-[67vh] flex items-center justify-center bg-white">
+      <div className="px-8 py-12">
         <div className="space-y-20">
           {/* Title with ultimate minimalism */}
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-thin text-center text-gray-900 tracking-tight leading-none">
