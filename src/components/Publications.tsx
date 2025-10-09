@@ -1,4 +1,5 @@
 import React from 'react';
+import PublicationCard from './PublicationCard';
 
 interface Publication {
   title: string;
@@ -54,43 +55,16 @@ const Publications: React.FC = () => {
 
       {/* Publications list - truly centered layout */}
       <div className="flex flex-col items-center px-8 md:px-12 lg:px-16">
-        <div className="w-full max-w-4xl space-y-[12rem] md:space-y-[14rem] lg:space-y-[16rem]">
+        <div className="w-full max-w-4xl flex flex-col gap-y-4 md:gap-y-5 lg:gap-y-6">
           {publications.map((pub, index) => (
-            <article
+            <PublicationCard
               key={index}
-              className="group flex flex-col items-center text-center"
-            >
-              {/* Ultra-thin bordered card with lift effect on hover */}
-              <div className="w-full border border-gray-200/50 px-24 md:px-40 lg:px-56 py-32 md:py-48 lg:py-64 transition-all duration-300 hover:border-r-[3px] hover:border-b-[3px] hover:border-r-gray-300 hover:border-b-gray-300">
-                {/* Publication title */}
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-mono font-thin text-gray-900 mb-20 md:mb-28 lg:mb-32 leading-loose tracking-tight">
-                  {pub.url ? (
-                    <a
-                      href={pub.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition-all duration-300 hover:text-blue-600"
-                    >
-                      {pub.title}
-                    </a>
-                  ) : (
-                    pub.title
-                  )}
-                </h3>
-
-                {/* Authors with enhanced spacing */}
-                <p className="text-lg md:text-xl font-mono font-light text-gray-500 mb-12 md:mb-16 lg:mb-20 tracking-wide">
-                  {pub.authors.join(" · ")}
-                </p>
-
-                {/* Venue and year - simpler design */}
-                <p className="text-base md:text-lg font-mono font-light text-gray-400 tracking-wider">
-                  <span className="uppercase">{pub.venue}</span>
-                  <span className="mx-6 text-gray-300">·</span>
-                  <span>{pub.year}</span>
-                </p>
-              </div>
-            </article>
+              title={pub.title}
+              authors={pub.authors}
+              venue={pub.venue}
+              year={pub.year}
+              url={pub.url}
+            />
           ))}
         </div>
       </div>
