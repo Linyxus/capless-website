@@ -11,4 +11,8 @@ export interface Publication {
   arxiv?: string;
   slides?: string;
   video?: string;
+  links?: Array<{
+    label: string;
+    url: string;
+  }>;
 }

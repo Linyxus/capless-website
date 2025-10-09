@@ -56,12 +56,12 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
           {/* Title section */}
           <div className="space-y-6 md:space-y-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-mono font-thin text-gray-900 leading-tight tracking-tight">
+            <h1 className="text-base md:text-lg font-mono font-bold text-gray-900 leading-relaxed tracking-tight">
               {paper.title}
             </h1>
 
             {/* Authors */}
-            <p className="text-lg md:text-xl lg:text-2xl font-mono font-light text-gray-500 leading-relaxed">
+            <p className="text-base md:text-lg font-mono font-light text-gray-500 leading-relaxed">
               {paper.authors.join(", ")}
             </p>
 
@@ -75,10 +75,37 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
           {/* Subtle divider */}
           <div className="h-px bg-gray-100"></div>
 
+          {/* Spacer above links */}
+          <div className="h-2 md:h-2.5"></div>
+
+          {/* Links section (without title) */}
+          {paper.links && paper.links.length > 0 && (
+            <div className="flex flex-wrap gap-3 md:gap-4">
+              {paper.links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-block border border-gray-200 text-xs md:text-sm font-mono font-light text-gray-900 hover:bg-blue-50 hover:border-blue-200 transition-all duration-300"
+                >
+                  <div className="flex items-baseline pt-3">
+                    <div className="w-2"></div>
+                    <span className="opacity-30 text-2xl md:text-3xl font-thin leading-none">↗</span>
+                    <div className="w-1.5"></div>
+                    <span>{link.label}</span>
+                    <div className="w-2"></div>
+                  </div>
+                  <div className="h-2"></div>
+                </a>
+              ))}
+            </div>
+          )}
+
           {/* Abstract section */}
           {paper.abstract && (
-            <div className="space-y-6">
-              <h2 className="text-xl md:text-2xl font-mono font-thin text-gray-900 tracking-tight">
+            <div className="space-y-8 md:space-y-10">
+              <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                 Abstract
               </h2>
               <p className="text-base md:text-lg font-mono font-light text-gray-700 leading-relaxed">
@@ -89,8 +116,8 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
           {/* Links section */}
           {(paper.doi || paper.arxiv || paper.slides || paper.video || paper.url) && (
-            <div className="space-y-6">
-              <h2 className="text-xl md:text-2xl font-mono font-thin text-gray-900 tracking-tight">
+            <div className="space-y-8 md:space-y-10">
+              <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                 Links
               </h2>
               <div className="flex flex-wrap gap-4 md:gap-5">
@@ -155,9 +182,9 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
           {/* BibTeX section */}
           {paper.bibtex && (
-            <div className="space-y-6">
+            <div className="space-y-8 md:space-y-10">
               <div className="flex items-baseline justify-between">
-                <h2 className="text-xl md:text-2xl font-mono font-thin text-gray-900 tracking-tight">
+                <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                   BibTeX
                 </h2>
                 <button
