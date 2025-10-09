@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       <div className="px-8 py-16">
         <div className="space-y-20">
           {/* Title with ultimate minimalism */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-thin text-center text-gray-900 tracking-wide leading-none">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-thin text-center text-gray-900 tracking-tight leading-none">
             Capture Checking
           </h1>
 
