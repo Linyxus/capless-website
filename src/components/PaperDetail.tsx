@@ -108,7 +108,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
               <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                 Abstract
               </h2>
-              <p className="text-base md:text-lg font-mono font-light text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-base font-mono font-light text-gray-700 leading-relaxed">
                 {paper.abstract}
               </p>
             </div>

@@ -13,12 +13,22 @@ export const publications: Publication[] = [
       { label: "Proceeding", url: "https://dl.acm.org/doi/10.1145/3763112" }
     ],
     abstract: "Capturing types in Scala unify static effect and resource tracking with object capabilities, enabling lightweight effect polymorphism with minimal notational overhead. However, their expressiveness has been insufficient for tracking capabilities embedded in generic data structures, preventing them from scaling to the standard collections library -- an essential prerequisite for broader adoption. This limitation stems from the inability to name capabilities within the system's notion of box types. This paper develops System Capless, a new foundation for capturing types that provides the theoretical basis for reach capabilities (rcaps), a novel mechanism for naming \"what's in the box.\" The calculus refines the universal capability notion into a new scheme with existential and universal capture set quantification. Intuitively, rcaps witness existentially quantified capture sets inside the boxes of generic types in a way that does not require exposing existential capture types in the surface language. We have fully mechanized the formal metatheory of System Capless in Lean, including proofs of type soundness and scope safety. System Capless supports the same lightweight notation of capturing types plus rcaps, as certified by a type-preserving translation, and also enables fully optional explicit capture-set quantification to increase expressiveness. Finally, we present a full reimplementation of capture checking in Scala 3 based on System Capless and migrate the entire Scala collections library and an asynchronous programming library to evaluate its practicality and ergonomics. Our results demonstrate that reach capabilities enable the adoption of capture checking in production code with minimal changes and minimal-to-zero notational overhead in a vast majority of cases.",
-    bibtex: `@inproceedings{xu2025whats,
-  title={What's in the Box: Ergonomic and Expressive Capture Tracking over Generic Data Structures},
-  author={Xu, Yichen and Bra{\v{c}}evac, Oliver and Pham, Cao Nguyen and Odersky, Martin},
-  booktitle={Proceedings of the ACM on Programming Languages (OOPSLA)},
-  year={2025},
-  publisher={ACM}
+    bibtex: `@article{xu2025capless,
+  author = {Xu, Yichen and Bra\\v{c}evac, Oliver and Pham, Cao Nguyen and Odersky, Martin},
+  title = {What's in the Box: Ergonomic and Expressive Capture Tracking over Generic Data Structures},
+  year = {2025},
+  issue_date = {October 2025},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {9},
+  number = {OOPSLA2},
+  url = {https://doi.org/10.1145/3763112},
+  doi = {10.1145/3763112},
+  journal = {Proc. ACM Program. Lang.},
+  month = oct,
+  articleno = {334},
+  numpages = {28},
+  keywords = {Capture Checking, Effect Polymorphism, Generic Data Structures, Scala}
 }`
   },
   {
