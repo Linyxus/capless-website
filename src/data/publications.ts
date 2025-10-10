@@ -4,7 +4,12 @@ export const publications: Publication[] = [
   {
     id: "whats-in-the-box-2025",
     title: "What's in the Box: Ergonomic and Expressive Capture Tracking over Generic Data Structures",
-    authors: ["Yichen Xu", "Oliver Bračevac", "Cao Nguyen Pham", "Martin Odersky"],
+    authors: [
+      { firstName: "Yichen", lastName: "Xu" },
+      { firstName: "Oliver", lastName: "Bračevac" },
+      { firstName: "Cao Nguyen", lastName: "Pham" },
+      { firstName: "Martin", lastName: "Odersky" }
+    ],
     venue: "OOPSLA",
     year: 2025,
     links: [
@@ -34,7 +39,11 @@ export const publications: Publication[] = [
   {
     id: "degrees-of-separation-2024",
     title: "Degrees of Separation: A Flexible Type System for Safe Concurrency",
-    authors: ["Yichen Xu", "Aleksander Boruch-Gruszecki", "Martin Odersky"],
+    authors: [
+      { firstName: "Yichen", lastName: "Xu" },
+      { firstName: "Aleksander", lastName: "Boruch-Gruszecki" },
+      { firstName: "Martin", lastName: "Odersky" }
+    ],
     venue: "OOPSLA",
     year: 2024,
     abstract: "Concurrent programming remains challenging due to the difficulty of ensuring thread safety while maintaining expressiveness. This paper presents a flexible type system that uses capture tracking to enforce safe concurrency through controlled aliasing. Our system introduces the concept of 'degrees of separation' between references, enabling fine-grained control over data sharing across thread boundaries. We formalize the type system, prove its soundness, and demonstrate its practicality through implementation in Scala 3, showing how it can express various concurrency patterns safely.",
@@ -49,7 +58,13 @@ export const publications: Publication[] = [
   {
     id: "capturing-types",
     title: "Capturing Types",
-    authors: ["Aleksander Boruch-Gruszecki", "Martin Odersky", "Edward Lee", "Ondřej Lhoták", "Jonathan Brachthäuser"],
+    authors: [
+      { firstName: "Aleksander", lastName: "Boruch-Gruszecki" },
+      { firstName: "Martin", lastName: "Odersky" },
+      { firstName: "Edward", lastName: "Lee" },
+      { firstName: "Ondřej", lastName: "Lhoták" },
+      { firstName: "Jonathan", lastName: "Brachthäuser" }
+    ],
     venue: "TOPLAS",
     abstract: "Type systems traditionally struggle to track effects and capabilities in a principled way. This paper introduces capture tracking, a novel type-based approach to effect safety that uses capture sets to track which capabilities are captured by functions and data structures. We present a core calculus with capture tracking, prove its soundness and expressiveness, and show how it subsumes and improves upon previous approaches to effect typing. Our system enables precise reasoning about capability flow while remaining practical and ergonomic for real-world programming.",
     bibtex: `@article{boruchgruszecki2024capturing,

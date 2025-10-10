@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import type { Publication } from '../types/publication';
+import { formatAuthorDisplay } from '../types/publication';
 
 interface PaperDetailProps {
   publications: Publication[];
@@ -62,7 +63,23 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
             {/* Authors */}
             <p className="text-base md:text-lg font-mono font-light text-gray-500 leading-relaxed">
-              {paper.authors.join(", ")}
+              {paper.authors.map((author, idx) => (
+                <React.Fragment key={idx}>
+                  {idx > 0 && ", "}
+                  {author.link ? (
+                    <a
+                      href={author.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-gray-900 transition-colors duration-300"
+                    >
+                      {formatAuthorDisplay(author)}
+                    </a>
+                  ) : (
+                    formatAuthorDisplay(author)
+                  )}
+                </React.Fragment>
+              ))}
             </p>
 
             {/* Venue and year */}

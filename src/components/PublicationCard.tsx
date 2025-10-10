@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import type { Author } from '../types/publication';
+import { formatAuthorDisplay } from '../types/publication';
 
 interface PublicationCardProps {
   id: string;
   title: string;
-  authors: string[];
+  authors: Author[];
   venue: string;
   year?: number;
 }
@@ -26,7 +28,24 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
 
         {/* Authors */}
         <p className="text-lg md:text-xl font-mono font-light text-gray-500 tracking-normal">
-          {authors.join(", ")}
+          {authors.map((author, idx) => (
+            <React.Fragment key={idx}>
+              {idx > 0 && ", "}
+              {author.link ? (
+                <a
+                  href={author.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-900 transition-colors duration-300"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {formatAuthorDisplay(author)}
+                </a>
+              ) : (
+                formatAuthorDisplay(author)
+              )}
+            </React.Fragment>
+          ))}
         </p>
 
         {/* Venue and year */}
