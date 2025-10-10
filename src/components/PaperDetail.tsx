@@ -71,7 +71,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
                       href={author.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-gray-900 transition-colors duration-300"
+                      className="underline decoration-dotted decoration-gray-300 decoration-1 underline-offset-2 hover:text-gray-900 hover:decoration-blue-600 hover:decoration-solid hover:decoration-[4px] transition-all duration-150"
                     >
                       {formatAuthorDisplay(author)}
                     </a>

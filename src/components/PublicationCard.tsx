@@ -22,7 +22,7 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
     <div className="w-full border border-transparent bg-white pl-0 pr-10 py-12 md:pl-0 md:pr-14 md:py-16 lg:pl-0 lg:pr-20 lg:py-20 transition-all duration-300 ease-out group-hover:-translate-y-2 group-hover:border-blue-100 group-hover:[border-right-width:2px] group-hover:[border-bottom-width:2px] group-hover:border-r-blue-200 group-hover:border-b-blue-200 group-hover:cursor-pointer">
       <div className="flex flex-col items-start text-left gap-y-2 md:gap-y-2.5 lg:gap-y-3">
         {/* Publication title */}
-        <h3 className="text-lg md:text-xl font-mono font-thin text-gray-900 leading-snug tracking-tight underline decoration-gray-200 decoration-1 underline-offset-4 group-hover:text-blue-600 group-hover:decoration-blue-600 transition-colors duration-300">
+        <h3 className="text-lg md:text-xl font-mono font-thin text-gray-900 leading-snug tracking-tight underline decoration-gray-200 decoration-1 underline-offset-4 group-hover:text-blue-600 group-hover:decoration-blue-600 group-hover:decoration-2 transition-all duration-150">
           {title}
         </h3>
 
@@ -36,7 +36,7 @@ const PublicationCard: React.FC<PublicationCardProps> = ({
                   href={author.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-900 transition-colors duration-300"
+                  className="underline decoration-dotted decoration-gray-300 decoration-1 underline-offset-2 hover:text-gray-900 hover:decoration-blue-600 hover:decoration-solid hover:decoration-[4px] transition-all duration-150"
                   onClick={(e) => e.stopPropagation()}
                 >
                   {formatAuthorDisplay(author)}
