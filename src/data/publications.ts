@@ -5,10 +5,10 @@ export const publications: Publication[] = [
     id: "whats-in-the-box-2025",
     title: "What's in the Box: Ergonomic and Expressive Capture Tracking over Generic Data Structures",
     authors: [
-      { firstName: "Yichen", lastName: "Xu" },
-      { firstName: "Oliver", lastName: "Bračevac" },
-      { firstName: "Cao Nguyen", lastName: "Pham" },
-      { firstName: "Martin", lastName: "Odersky" }
+      { firstName: "Yichen", lastName: "Xu", link: "https://scholar.google.com" },
+      { firstName: "Oliver", lastName: "Bračevac", link: "https://scholar.google.com" },
+      { firstName: "Cao Nguyen", lastName: "Pham", link: "https://scholar.google.com" },
+      { firstName: "Martin", lastName: "Odersky", link: "https://scholar.google.com" }
     ],
     venue: "OOPSLA",
     year: 2025,
@@ -40,9 +40,9 @@ export const publications: Publication[] = [
     id: "degrees-of-separation-2024",
     title: "Degrees of Separation: A Flexible Type System for Safe Concurrency",
     authors: [
-      { firstName: "Yichen", lastName: "Xu" },
-      { firstName: "Aleksander", lastName: "Boruch-Gruszecki" },
-      { firstName: "Martin", lastName: "Odersky" }
+      { firstName: "Yichen", lastName: "Xu", link: "https://scholar.google.com" },
+      { firstName: "Aleksander", lastName: "Boruch-Gruszecki", link: "https://scholar.google.com" },
+      { firstName: "Martin", lastName: "Odersky", link: "https://scholar.google.com" }
     ],
     venue: "OOPSLA",
     year: 2024,
@@ -59,11 +59,11 @@ export const publications: Publication[] = [
     id: "capturing-types",
     title: "Capturing Types",
     authors: [
-      { firstName: "Aleksander", lastName: "Boruch-Gruszecki" },
-      { firstName: "Martin", lastName: "Odersky" },
-      { firstName: "Edward", lastName: "Lee" },
-      { firstName: "Ondřej", lastName: "Lhoták" },
-      { firstName: "Jonathan", lastName: "Brachthäuser" }
+      { firstName: "Aleksander", lastName: "Boruch-Gruszecki", link: "https://scholar.google.com" },
+      { firstName: "Martin", lastName: "Odersky", link: "https://scholar.google.com" },
+      { firstName: "Edward", lastName: "Lee", link: "https://scholar.google.com" },
+      { firstName: "Ondřej", lastName: "Lhoták", link: "https://scholar.google.com" },
+      { firstName: "Jonathan", lastName: "Brachthäuser", link: "https://scholar.google.com" }
     ],
     venue: "TOPLAS",
     abstract: "Type systems traditionally struggle to track effects and capabilities in a principled way. This paper introduces capture tracking, a novel type-based approach to effect safety that uses capture sets to track which capabilities are captured by functions and data structures. We present a core calculus with capture tracking, prove its soundness and expressiveness, and show how it subsumes and improves upon previous approaches to effect typing. Our system enables precise reasoning about capability flow while remaining practical and ergonomic for real-world programming.",
