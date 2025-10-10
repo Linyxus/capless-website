@@ -48,9 +48,9 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
           <div>
             <button
               onClick={() => navigate('/')}
-              className="group inline-flex items-center text-base md:text-lg font-mono font-light text-gray-500 hover:text-gray-900 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 px-4 py-2 -ml-4 rounded text-base md:text-lg font-mono font-light text-gray-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
             >
-              <span className="text-2xl font-thin mr-2 group-hover:-translate-x-1 transition-transform duration-300">←</span>
+              <span className="text-2xl font-thin">←</span>
               <span>Back</span>
             </button>
           </div>
