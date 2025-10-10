@@ -2,11 +2,13 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Publications from './components/Publications'
 import PaperDetail from './components/PaperDetail'
+import ScrollToTop from './components/ScrollToTop'
 import { publications } from './data/publications'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={
           <div className="min-h-screen bg-white">
