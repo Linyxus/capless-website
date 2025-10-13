@@ -1,15 +1,16 @@
 import type { Publication } from '../types/publication';
+import { getAuthors } from './authors';
 
 export const publications: Publication[] = [
   {
     id: "whats-in-the-box-2025",
     title: "What's in the Box: Ergonomic and Expressive Capture Tracking over Generic Data Structures",
-    authors: [
-      { firstName: "Yichen", lastName: "Xu", link: "https://www.yichenxu.me" },
-      { firstName: "Oliver", lastName: "Bračevac", link: "https://bracevac.org" },
-      { firstName: "Cao Nguyen", lastName: "Pham", link: "https://orcid.org/0009-0005-2543-3309" },
-      { firstName: "Martin", lastName: "Odersky", link: "https://people.epfl.ch/martin.odersky?lang=en" }
-    ],
+    authors: getAuthors([
+      "Yichen Xu",
+      "Oliver Bračevac",
+      "Cao Nguyen Pham",
+      "Martin Odersky"
+    ]),
     venue: "OOPSLA",
     year: 2025,
     links: [
@@ -39,39 +40,67 @@ export const publications: Publication[] = [
   {
     id: "degrees-of-separation-2024",
     title: "Degrees of Separation: A Flexible Type System for Safe Concurrency",
-    authors: [
-      { firstName: "Yichen", lastName: "Xu", link: "https://www.yichenxu.me" },
-      { firstName: "Aleksander", lastName: "Boruch-Gruszecki", link: "https://abgru.me" },
-      { firstName: "Martin", lastName: "Odersky", link: "https://people.epfl.ch/martin.odersky?lang=en" }
-    ],
+    authors: getAuthors([
+      "Yichen Xu",
+      "Aleksander Boruch-Gruszecki",
+      "Martin Odersky"
+    ]),
     venue: "OOPSLA",
     year: 2024,
-    abstract: "Concurrent programming remains challenging due to the difficulty of ensuring thread safety while maintaining expressiveness. This paper presents a flexible type system that uses capture tracking to enforce safe concurrency through controlled aliasing. Our system introduces the concept of 'degrees of separation' between references, enabling fine-grained control over data sharing across thread boundaries. We formalize the type system, prove its soundness, and demonstrate its practicality through implementation in Scala 3, showing how it can express various concurrency patterns safely.",
-    bibtex: `@inproceedings{xu2024degrees,
-  title={Degrees of Separation: A Flexible Type System for Safe Concurrency},
-  author={Xu, Yichen and Boruch-Gruszecki, Aleksander and Odersky, Martin},
-  booktitle={Proceedings of the ACM on Programming Languages (OOPSLA)},
-  year={2024},
-  publisher={ACM}
+    links: [
+      { label: "ACM Digital Library", url: "https://dl.acm.org/doi/10.1145/3649853" },
+      { label: "PDF", url: "https://infoscience.epfl.ch/record/310307/files/paper.pdf" }
+    ],
+    abstract: "Data races have long been a notorious problem in concurrent programming. They are hard to detect, and lead to non-deterministic behaviours. There has been a lot of interest in type systems that statically guarantee data race freedom. Significant progress has been made in this area, and these type systems are increasingly usable and practical. However, their adoption in mainstream programming languages is still limited, which is largely attributed to their strict alias prevention principles that obstruct the usage of existing programming patterns. This is a deterrent to the migration of existing code bases. To tackle this problem, we propose Capture Separation Calculus (System CSC), a calculus that models fork-join parallelism and statically prevents data races while being compatible with established programming patterns. It follows a control-as-you-need philosophy: by default, aliases are allowed, but they are tracked in the type system.",
+    bibtex: `@article{xu2024degrees,
+  author = {Xu, Yichen and Boruch-Gruszecki, Aleksander and Odersky, Martin},
+  title = {Degrees of Separation: A Flexible Type System for Safe Concurrency},
+  year = {2024},
+  issue_date = {April 2024},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {8},
+  number = {OOPSLA1},
+  url = {https://doi.org/10.1145/3649853},
+  doi = {10.1145/3649853},
+  journal = {Proc. ACM Program. Lang.},
+  month = apr,
+  articleno = {291},
+  numpages = {27}
 }`
   },
   {
     id: "capturing-types",
     title: "Capturing Types",
-    authors: [
-      { firstName: "Aleksander", lastName: "Boruch-Gruszecki", link: "https://abgru.me" },
-      { firstName: "Martin", lastName: "Odersky", link: "https://people.epfl.ch/martin.odersky?lang=en" },
-      { firstName: "Edward", lastName: "Lee", link: "#" },
-      { firstName: "Ondřej", lastName: "Lhoták", link: "#" },
-      { firstName: "Jonathan", lastName: "Brachthäuser", link: "#" }
-    ],
+    authors: getAuthors([
+      "Aleksander Boruch-Gruszecki",
+      "Martin Odersky",
+      "Edward Lee",
+      "Ondřej Lhoták",
+      "Jonathan Brachthäuser"
+    ]),
     venue: "TOPLAS",
-    abstract: "Type systems traditionally struggle to track effects and capabilities in a principled way. This paper introduces capture tracking, a novel type-based approach to effect safety that uses capture sets to track which capabilities are captured by functions and data structures. We present a core calculus with capture tracking, prove its soundness and expressiveness, and show how it subsumes and improves upon previous approaches to effect typing. Our system enables precise reasoning about capability flow while remaining practical and ergonomic for real-world programming.",
-    bibtex: `@article{boruchgruszecki2024capturing,
-  title={Capturing Types},
-  author={Boruch-Gruszecki, Aleksander and Odersky, Martin and Lee, Edward and Lhot{\\'a}k, Ond{\\v{r}}ej and Brachth{\\"a}user, Jonathan},
-  journal={ACM Transactions on Programming Languages and Systems (TOPLAS)},
-  publisher={ACM}
+    year: 2023,
+    links: [
+      { label: "ACM Digital Library", url: "https://dl.acm.org/doi/10.1145/3618003" },
+      { label: "PDF", url: "https://se.cs.uni-tuebingen.de/publications/boruch2023capturing.pdf" }
+    ],
+    abstract: "Type systems usually characterize the shape of values but not their free variables. However, many desirable safety properties could be guaranteed if one knew the free variables captured by values. This paper describes CC<:◻, a calculus where captured variables are succinctly represented in types, and shows it can be used to safely implement effects and effect polymorphism via scoped capabilities. The decision to track captured variables guides key aspects of the calculus, and CC<:◻ admits simple and intuitive types for common data structures and their typical usage patterns.",
+    bibtex: `@article{boruchgruszecki2023capturing,
+  author = {Boruch-Gruszecki, Aleksander and Odersky, Martin and Lee, Edward and Lhot{\\'a}k, Ond{\\v{r}}ej and Brachth{\\"a}user, Jonathan Immanuel},
+  title = {Capturing Types},
+  year = {2023},
+  issue_date = {December 2023},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {45},
+  number = {4},
+  url = {https://doi.org/10.1145/3618003},
+  doi = {10.1145/3618003},
+  journal = {ACM Trans. Program. Lang. Syst.},
+  month = nov,
+  articleno = {21},
+  numpages = {52}
 }`
   }
 ];
