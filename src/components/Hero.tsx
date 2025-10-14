@@ -31,14 +31,14 @@ const Hero: React.FC = () => {
               <span className="absolute -bottom-2 left-0 w-full h-px bg-black transition-all duration-300 ease-out group-hover:h-[3px]"></span>
             </a>
 
-            <a
+            {/* <a
               href="#"
               className="group relative inline-flex items-baseline text-xl md:text-2xl font-mono font-normal text-blue-600 tracking-wide"
             >
               <span className="opacity-40 text-3xl md:text-4xl font-thin leading-none" style={{ marginRight: '1rem' }}>↗</span>
               <span>Try Capture Checking</span>
               <span className="absolute -bottom-2 left-0 w-full h-px bg-blue-600 transition-all duration-300 ease-out group-hover:h-[3px]"></span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
