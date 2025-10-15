@@ -4,7 +4,7 @@ import { projects } from '../data/projects';
 
 const Projects: React.FC = () => {
   return (
-    <section className="py-48 md:py-64 lg:py-80 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 bg-white">
       {/* Section title - centered relative to full viewport */}
       <div className="px-8">
         <h2 className="text-5xl md:text-6xl font-mono font-thin text-gray-900 text-center tracking-tight">
