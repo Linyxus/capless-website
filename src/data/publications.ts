@@ -70,6 +70,30 @@ export const publications: Publication[] = [
 }`
   },
   {
+    id: "mechanized-box-calculus-2023",
+    title: "A Mechanized Theory of the Box Calculus",
+    authors: getAuthors([
+      "Joseph Fourment",
+      "Yichen Xu"
+    ]),
+    venue: "IWACO",
+    year: 2023,
+    arxiv: "https://arxiv.org/abs/2309.05362",
+    links: [
+      { label: "arXiv", url: "https://arxiv.org/abs/2309.05362" },
+      { label: "Coq Mechanization", url: "https://github.com/felko/ccsubbox" }
+    ],
+    abstract: "The capture calculus is an extension of System F<: that tracks free variables of terms in their type, allowing one to represent capabilities while limiting their scope. While previous calculi had mechanized soundness proofs -- notably System CF<: -- the latest version, namely the box calculus (System CC<:box), only had a paper proof. We present here our work on mechanizing the theory of the box calculus in Coq, and the challenges encountered along the way. While doing so, we motivate the current design of capture calculus, in particular the concept of boxes, from both user and metatheoretical standpoints. Our mechanization is complete and available on GitHub.",
+    bibtex: `@inproceedings{fourment2023mechanized,
+  author = {Fourment, Joseph and Xu, Yichen},
+  title = {A Mechanized Theory of the Box Calculus},
+  year = {2023},
+  booktitle = {Proceedings of the 9th International Workshop on Aliasing, Confinement and Ownership in Object-Oriented Programming (IWACO '23)},
+  url = {https://arxiv.org/abs/2309.05362},
+  doi = {10.48550/arXiv.2309.05362}
+}`
+  },
+  {
     id: "capturing-types",
     title: "Capturing Types",
     authors: getAuthors([

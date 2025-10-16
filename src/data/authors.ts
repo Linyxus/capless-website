@@ -41,6 +41,11 @@ export const AUTHORS: Record<string, Author> = {
     firstName: "Jonathan",
     lastName: "Brachthäuser",
     link: "https://b-studios.de/"
+  },
+  "Joseph Fourment": {
+    firstName: "Joseph",
+    lastName: "Fourment",
+    link: "https://github.com/felko"
   }
 };
 
