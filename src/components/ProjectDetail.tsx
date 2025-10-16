@@ -19,7 +19,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
           <p className="text-2xl font-mono font-light text-gray-500">Project not found</p>
           <button
             onClick={() => navigate('/')}
-            className="text-lg font-mono font-light text-blue-600 hover:text-blue-700 transition-colors"
+            className="text-lg font-mono font-light text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
           >
             ← Back to home
           </button>
@@ -38,7 +38,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
           <div>
             <button
               onClick={() => navigate('/')}
-              className="group inline-flex items-center gap-2 px-4 py-2 -ml-4 rounded text-base md:text-lg font-mono font-light text-gray-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
+              className="group inline-flex items-center gap-2 px-4 py-2 -ml-4 rounded text-base md:text-lg font-mono font-light text-gray-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             >
               <span className="text-2xl font-thin">←</span>
               <span>Back</span>

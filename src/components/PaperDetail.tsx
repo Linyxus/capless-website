@@ -21,7 +21,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
           <p className="text-2xl font-mono font-light text-gray-500">Paper not found</p>
           <button
             onClick={() => navigate('/')}
-            className="text-lg font-mono font-light text-blue-600 hover:text-blue-700 transition-colors"
+            className="text-lg font-mono font-light text-blue-600 hover:text-blue-700 transition-colors cursor-pointer"
           >
             ← Back to home
           </button>
@@ -48,7 +48,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
           <div>
             <button
               onClick={() => navigate('/')}
-              className="group inline-flex items-center gap-2 px-4 py-2 -ml-4 rounded text-base md:text-lg font-mono font-light text-gray-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300"
+              className="group inline-flex items-center gap-2 px-4 py-2 -ml-4 rounded text-base md:text-lg font-mono font-light text-gray-500 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 cursor-pointer"
             >
               <span className="text-2xl font-thin">←</span>
               <span>Back</span>
@@ -206,7 +206,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
                 </h2>
                 <button
                   onClick={copyBibtex}
-                  className="text-sm md:text-base font-mono font-light text-gray-500 hover:text-blue-600 transition-colors duration-300"
+                  className="text-sm md:text-base font-mono font-light text-gray-500 hover:text-blue-600 transition-colors duration-300 cursor-pointer"
                 >
                   {bibtexCopied ? 'Copied!' : 'Copy'}
                 </button>
