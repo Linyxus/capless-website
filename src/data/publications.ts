@@ -78,7 +78,6 @@ export const publications: Publication[] = [
     ]),
     venue: "IWACO",
     year: 2023,
-    arxiv: "https://arxiv.org/abs/2309.05362",
     links: [
       { label: "arXiv", url: "https://arxiv.org/abs/2309.05362" },
       { label: "Coq Mechanization", url: "https://github.com/felko/ccsubbox" }
