@@ -9,8 +9,8 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ id, name, description }) => {
   const cardContent = (
-    <div className="w-full border border-transparent bg-white px-6 py-12 md:px-8 md:py-16 lg:px-12 lg:py-20 transition-all duration-300 ease-out group-hover:-translate-y-2 group-hover:border-blue-100 group-hover:[border-right-width:2px] group-hover:[border-bottom-width:2px] group-hover:border-r-blue-200 group-hover:border-b-blue-200 group-hover:cursor-pointer">
-      <div className="flex flex-col items-start text-left gap-y-2 md:gap-y-2.5 lg:gap-y-3">
+    <div className="w-full border border-transparent bg-white px-4 py-5 md:px-6 md:py-6 lg:px-8 lg:py-7 transition-all duration-300 ease-out group-hover:-translate-y-2 group-hover:border-blue-100 group-hover:[border-right-width:2px] group-hover:[border-bottom-width:2px] group-hover:border-r-blue-200 group-hover:border-b-blue-200 group-hover:cursor-pointer">
+      <div className="flex flex-col items-start text-left gap-y-1.5 md:gap-y-2 lg:gap-y-2.5">
         {/* Project name */}
         <h3 className="text-lg md:text-xl font-mono font-thin text-gray-900 leading-snug tracking-tight underline decoration-gray-200 decoration-1 underline-offset-4 group-hover:text-blue-600 group-hover:decoration-blue-600 group-hover:decoration-2 transition-all duration-150">
           {name}

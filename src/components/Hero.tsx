@@ -3,8 +3,8 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <div className="h-[67vh] flex items-center justify-center bg-white">
-      <div className="px-8 py-12">
-        <div className="space-y-20">
+      <div className="px-8 py-6">
+        <div className="space-y-8">
           {/* Title with ultimate minimalism */}
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-mono font-thin text-center text-gray-900 tracking-tight leading-none">
             Capture Checking
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
           </p>
 
           {/* Prominent call-to-action links */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 !mt-20">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 !mt-10">
             <a
               href="https://docs.scala-lang.org/scala3/reference/experimental/cc.html"
               target="_blank"

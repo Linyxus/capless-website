@@ -29,10 +29,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
   }
 
   return (
-    <div className="min-h-screen bg-white py-16 md:py-24 lg:py-32">
+    <div className="min-h-screen bg-white py-8 md:py-12 lg:py-16">
       {/* Main content - centered container */}
       <div className="flex justify-center px-8 md:px-12 lg:px-16">
-        <div className="w-full max-w-3xl space-y-12 md:space-y-16">
+        <div className="w-full max-w-3xl space-y-6 md:space-y-8">
 
           {/* Back button - minimal, top left of centered content */}
           <div>
@@ -46,7 +46,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
           </div>
 
           {/* Title section */}
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-3 md:space-y-4">
             <h1 className="text-base md:text-lg font-mono font-bold text-gray-900 leading-relaxed tracking-tight">
               {project.name}
             </h1>
@@ -61,7 +61,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
           <div className="h-px bg-gray-100"></div>
 
           {/* Spacer above links */}
-          <div className="h-2 md:h-2.5"></div>
+          <div className="h-1 md:h-1.5"></div>
 
           {/* Links section (without title) */}
           {project.links && project.links.length > 0 && (
@@ -89,7 +89,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
 
           {/* Abstract section */}
           {project.abstract && (
-            <div className="space-y-8 md:space-y-10">
+            <div className="space-y-4 md:space-y-5">
               <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                 About
               </h2>
@@ -100,7 +100,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
           )}
 
           {/* Bottom spacing */}
-          <div className="h-16 md:h-24"></div>
+          <div className="h-8 md:h-12"></div>
 
         </div>
       </div>

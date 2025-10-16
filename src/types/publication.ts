@@ -1,4 +1,4 @@
-Sexport interface Author {
+export interface Author {
   firstName: string;
   lastName: string;
   link?: string;

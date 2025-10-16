@@ -39,10 +39,10 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
   };
 
   return (
-    <div className="min-h-screen bg-white py-16 md:py-24 lg:py-32">
+    <div className="min-h-screen bg-white py-8 md:py-12 lg:py-16">
       {/* Main content - centered container */}
       <div className="flex justify-center px-8 md:px-12 lg:px-16">
-        <div className="w-full max-w-3xl space-y-12 md:space-y-16">
+        <div className="w-full max-w-3xl space-y-6 md:space-y-8">
 
           {/* Back button - minimal, top left of centered content */}
           <div>
@@ -56,7 +56,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
           </div>
 
           {/* Title section */}
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-3 md:space-y-4">
             <h1 className="text-base md:text-lg font-mono font-bold text-gray-900 leading-relaxed tracking-tight">
               {paper.title}
             </h1>
@@ -92,9 +92,6 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
           {/* Subtle divider */}
           <div className="h-px bg-gray-100"></div>
 
-          {/* Spacer above links */}
-          <div className="h-2 md:h-2.5"></div>
-
           {/* Links section (without title) */}
           {paper.links && paper.links.length > 0 && (
             <div className="flex flex-wrap gap-3 md:gap-4">
@@ -106,7 +103,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
                   rel="noopener noreferrer"
                   className="group inline-block border border-gray-200 text-xs md:text-sm font-mono font-light text-gray-900 hover:bg-blue-50 hover:border-blue-200 transition-all duration-300"
                 >
-                  <div className="flex items-baseline pt-3">
+                  <div className="flex items-baseline">
                     <div className="w-2"></div>
                     <span className="opacity-30 text-2xl md:text-3xl font-thin leading-none">↗</span>
                     <div className="w-1.5"></div>
@@ -121,7 +118,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
           {/* Abstract section */}
           {paper.abstract && (
-            <div className="space-y-8 md:space-y-10">
+            <div className="space-y-4 md:space-y-5">
               <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                 Abstract
               </h2>
@@ -133,7 +130,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
           {/* Links section */}
           {(paper.doi || paper.arxiv || paper.slides || paper.video || paper.url) && (
-            <div className="space-y-8 md:space-y-10">
+            <div className="space-y-4 md:space-y-5">
               <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                 Links
               </h2>
@@ -199,7 +196,7 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
 
           {/* BibTeX section */}
           {paper.bibtex && (
-            <div className="space-y-8 md:space-y-10">
+            <div className="space-y-4 md:space-y-5">
               <div className="flex items-baseline justify-between">
                 <h2 className="text-base md:text-lg font-mono font-bold text-gray-900 tracking-tight">
                   BibTeX
@@ -211,16 +208,13 @@ const PaperDetail: React.FC<PaperDetailProps> = ({ publications }) => {
                   {bibtexCopied ? 'Copied!' : 'Copy'}
                 </button>
               </div>
-              <pre className="bg-gray-50 px-6 py-6 rounded-sm overflow-x-auto">
+              <pre className="bg-gray-50 px-4 py-4 rounded-sm overflow-x-auto">
                 <code className="text-sm md:text-base font-mono font-light text-gray-800 leading-relaxed">
                   {paper.bibtex}
                 </code>
               </pre>
             </div>
           )}
-
-          {/* Bottom spacing */}
-          <div className="h-16 md:h-24"></div>
 
         </div>
       </div>
