@@ -4,7 +4,7 @@ import { publications } from '../data/publications';
 
 const Publications: React.FC = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 bg-white">
+    <section className="py-4 md:py-6 lg:py-8 bg-white">
       {/* Section title - centered relative to full viewport */}
       <div className="px-8">
         <h2 className="text-5xl md:text-6xl font-mono font-thin text-gray-900 text-center tracking-tight">

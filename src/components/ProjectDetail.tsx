@@ -60,9 +60,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
           {/* Subtle divider */}
           <div className="h-px bg-gray-100"></div>
 
-          {/* Spacer above links */}
-          <div className="h-1 md:h-1.5"></div>
-
           {/* Links section (without title) */}
           {project.links && project.links.length > 0 && (
             <div className="flex flex-wrap gap-3 md:gap-4">
@@ -74,7 +71,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ projects }) => {
                   rel="noopener noreferrer"
                   className="group inline-block border border-gray-200 text-xs md:text-sm font-mono font-light text-gray-900 hover:bg-blue-50 hover:border-blue-200 transition-all duration-300"
                 >
-                  <div className="flex items-baseline pt-3">
+                  <div className="flex items-baseline">
                     <div className="w-2"></div>
                     <span className="opacity-30 text-2xl md:text-3xl font-thin leading-none">↗</span>
                     <div className="w-1.5"></div>
