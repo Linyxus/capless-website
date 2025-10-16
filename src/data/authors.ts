@@ -46,6 +46,21 @@ export const AUTHORS: Record<string, Author> = {
     firstName: "Joseph",
     lastName: "Fourment",
     link: "https://github.com/felko"
+  },
+  "Adrien Ghosn": {
+    firstName: "Adrien",
+    lastName: "Ghosn",
+    link: "#"
+  },
+  "Mathias Payer": {
+    firstName: "Mathias",
+    lastName: "Payer",
+    link: "#"
+  },
+  "Clément Pit-Claudel": {
+    firstName: "Clément",
+    lastName: "Pit-Claudel",
+    link: "https://pit-claudel.fr/clement/"
   }
 };
 

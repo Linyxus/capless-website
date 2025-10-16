@@ -70,6 +70,38 @@ export const publications: Publication[] = [
 }`
   },
   {
+    id: "gradient-2024",
+    title: "Gradient: Gradual Compartmentalization via Object Capabilities Tracked in Types",
+    authors: getAuthors([
+      "Aleksander Boruch-Gruszecki",
+      "Adrien Ghosn",
+      "Mathias Payer",
+      "Clément Pit-Claudel"
+    ]),
+    venue: "OOPSLA",
+    year: 2024,
+    links: [
+      { label: "ACM Digital Library", url: "https://dl.acm.org/doi/10.1145/3689751" }
+    ],
+    abstract: "Modern software needs fine-grained compartmentalization, i.e., intra-process isolation. A particularly important reason for it are supply-chain attacks, whose danger is aggravated by modern applications depending on hundreds or even thousands of libraries. Object capabilities (ocaps) are a particularly salient approach to compartmentalization, but they require the entire program to assume a lack of ambient authority. Most of existing code was written under no such assumption; effectively, existing applications need to undergo a rewrite-the-world migration to reap the advantages of ocap. We propose gradual compartmentalization, an approach which allows gradually migrating an application to object capabilities, component-by-component in any order, while being able to enforce security policies on any component. The approach relies on runtime authority enforcement and tracking the authority of objects in the type system. We present Gradient, a proof-of-concept gradual compartmentalization extension to Scala which uses Enclosures and Capture Tracking as its key components.",
+    bibtex: `@article{boruchgruszecki2024gradient,
+  author = {Boruch-Gruszecki, Aleksander and Ghosn, Adrien and Payer, Mathias and Pit-Claudel, Cl{\\'e}ment},
+  title = {Gradient: Gradual Compartmentalization via Object Capabilities Tracked in Types},
+  year = {2024},
+  issue_date = {October 2024},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {8},
+  number = {OOPSLA2},
+  url = {https://doi.org/10.1145/3689751},
+  doi = {10.1145/3689751},
+  journal = {Proc. ACM Program. Lang.},
+  month = oct,
+  articleno = {318},
+  numpages = {31}
+}`
+  },
+  {
     id: "mechanized-box-calculus-2023",
     title: "A Mechanized Theory of the Box Calculus",
     authors: getAuthors([
